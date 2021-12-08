@@ -1,0 +1,12 @@
+{% extends 'layouts/_default.twig' %}
+{% block title %}Edit Quiz{% endblock %}
+
+{% block main_content %}
+	<h1>Edit Quiz</h1>
+	<ul>
+		{% for e in errors %}
+		<li>{{ e }}</li>
+		{% endfor %}
+	</ul>
+	{% include 'quizzes/_form.twig' with { 'quiz': quiz } %}
+{% endblock %}
